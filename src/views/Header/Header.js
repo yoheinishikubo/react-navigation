@@ -11,6 +11,7 @@ import {
   StyleSheet,
   View,
   ViewPropTypes,
+  StatusBar,
 } from 'react-native';
 
 import HeaderTitle from './HeaderTitle';
@@ -44,7 +45,7 @@ type State = {
 };
 
 const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : 0;
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight;
 const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56;
 
 type Props = HeaderProps & { isLandscape: boolean };
